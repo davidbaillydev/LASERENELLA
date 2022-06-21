@@ -7519,14 +7519,14 @@ h1, h2, h3, h4, h5,
   .owl-carousel.home-slider {
     position: relative;
     height: 750px;
-    z-index: auto; }
+    z-index: 0; }
     .owl-carousel.home-slider .slider-item {
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center center;
       height: 750px;
       position: relative;
-      z-index: auto; }
+      z-index: 0; }
       .owl-carousel.home-slider .slider-item .overlay {
         position: absolute;
         top: 0;
