@@ -45,8 +45,7 @@ html {
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
-  -ms-overflow-style: scroll;
-  overflow-y: scroll;
+  -ms-overflow-style: scrollbar;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
 
 @-ms-viewport {
@@ -1511,18 +1510,17 @@ pre {
   .table-responsive-sm {
     display: block;
     width: 100%;
-    overflow-y: scroll;
+    overflow-x: auto;
     -webkit-overflow-scrolling: touch;
     -ms-overflow-style: -ms-autohiding-scrollbar; }
     .table-responsive-sm > .table-bordered {
       border: 0; } }
-      
 
 @media (max-width: 767.98px) {
   .table-responsive-md {
     display: block;
     width: 100%;
-    overflow-y: scroll;
+    overflow-x: auto;
     -webkit-overflow-scrolling: touch;
     -ms-overflow-style: -ms-autohiding-scrollbar; }
     .table-responsive-md > .table-bordered {
@@ -1532,7 +1530,7 @@ pre {
   .table-responsive-lg {
     display: block;
     width: 100%;
-    overflow-y: scroll;
+    overflow-x: auto;
     -webkit-overflow-scrolling: touch;
     -ms-overflow-style: -ms-autohiding-scrollbar; }
     .table-responsive-lg > .table-bordered {
@@ -1542,7 +1540,7 @@ pre {
   .table-responsive-xl {
     display: block;
     width: 100%;
-    overflow-y: scroll;
+    overflow-x: auto;
     -webkit-overflow-scrolling: touch;
     -ms-overflow-style: -ms-autohiding-scrollbar; }
     .table-responsive-xl > .table-bordered {
@@ -1551,7 +1549,7 @@ pre {
 .table-responsive {
   display: block;
   width: 100%;
-  overflow-y: scroll;
+  overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   -ms-overflow-style: -ms-autohiding-scrollbar; }
   .table-responsive > .table-bordered {
@@ -4360,7 +4358,7 @@ button.close {
   outline: 0; }
   .modal-open .modal {
     overflow-x: hidden;
-    overflow-y: scroll; }
+    overflow-y: auto; }
 
 .modal-dialog {
   position: relative;
@@ -4712,16 +4710,16 @@ button.close {
 .popover-body {
   padding: 0.5rem 0.75rem;
   color: #212529; }
- 
+
 .carousel {
-  position: relative; } 
+  position: relative; }
 
 .carousel-inner {
   position: relative;
   width: 100%;
-  overflow-y: scroll; }
+  overflow: hidden; }
 
- .carousel-item {
+.carousel-item {
   position: relative;
   display: none;
   -webkit-box-align: center;
@@ -4741,19 +4739,19 @@ button.close {
     .carousel-item {
       -webkit-transition: none;
       -o-transition: none;
-      transition: none; } } 
+      transition: none; } }
 
- .carousel-item.active,
+.carousel-item.active,
 .carousel-item-next,
 .carousel-item-prev {
-  display: block; } 
+  display: block; }
 
 .carousel-item-next,
 .carousel-item-prev {
   position: absolute;
   top: 0; }
 
- .carousel-item-next.carousel-item-left,
+.carousel-item-next.carousel-item-left,
 .carousel-item-prev.carousel-item-right {
   -webkit-transform: translateX(0);
   -ms-transform: translateX(0);
@@ -4819,9 +4817,9 @@ button.close {
     .carousel-fade .active.carousel-item-left,
     .carousel-fade .active.carousel-item-prev {
       -webkit-transform: translate3d(0, 0, 0);
-      transform: translate3d(0, 0, 0); } } 
+      transform: translate3d(0, 0, 0); } }
 
- .carousel-control-prev,
+.carousel-control-prev,
 .carousel-control-next {
   position: absolute;
   top: 0;
@@ -4845,29 +4843,29 @@ button.close {
     color: #fff;
     text-decoration: none;
     outline: 0;
-    opacity: .9; } 
+    opacity: .9; }
 
- .carousel-control-prev {
+.carousel-control-prev {
   left: 0; }
 
 .carousel-control-next {
-  right: 0; } 
+  right: 0; }
 
- .carousel-control-prev-icon,
+.carousel-control-prev-icon,
 .carousel-control-next-icon {
   display: inline-block;
   width: 20px;
   height: 20px;
   background: transparent no-repeat center center;
-  background-size: 100% 100%; } */
+  background-size: 100% 100%; }
 
- .carousel-control-prev-icon {
+.carousel-control-prev-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E"); }
 
 .carousel-control-next-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E"); } 
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E"); }
 
- .carousel-indicators {
+.carousel-indicators {
   position: absolute;
   right: 0;
   bottom: 10px;
@@ -4922,7 +4920,7 @@ button.close {
   padding-top: 20px;
   padding-bottom: 20px;
   color: #fff;
-  text-align: center; } 
+  text-align: center; }
 
 .align-baseline {
   vertical-align: baseline !important; }
@@ -7474,7 +7472,7 @@ h1, h2, h3, h4, h5,
     color: #fac564; }
   .navbar-brand small {
     text-transform: uppercase;
-    font-size: 12px;
+    font-size: 11px;
     display: block;
     text-align: center;
     color: #fac564;
