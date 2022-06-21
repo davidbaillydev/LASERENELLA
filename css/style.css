@@ -451,7 +451,7 @@ pre {
     word-break: normal; }
 
 .pre-scrollable {
-  max-height: 340px;
+  max-height: 1040px;
   overflow-y: scroll; }
 
 .container {
@@ -1515,6 +1515,18 @@ pre {
     -ms-overflow-style: -ms-autohiding-scrollbar; }
     .table-responsive-sm > .table-bordered {
       border: 0; } }
+
+ @media only screen and (max-width: 750px) {
+  .table-responsive-md {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar; }
+    .table-responsive-md > .table-bordered {
+      border: 0; }
+
+      }
 
 @media (max-width: 767.98px) {
   .table-responsive-md {
@@ -4358,7 +4370,7 @@ button.close {
   outline: 0; }
   .modal-open .modal {
     overflow-x: hidden;
-    overflow-y: auto; }
+    overflow-y: scroll; }
 
 .modal-dialog {
   position: relative;
