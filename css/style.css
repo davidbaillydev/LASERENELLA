@@ -168,7 +168,7 @@ pre {
   margin-top: 0;
   margin-bottom: 1rem;
   overflow: auto;
-  -ms-overflow-style: scrollbar; }
+  -ms-overflow-style: auto ; }
 
 figure {
   margin: 0 0 1rem; }
@@ -178,7 +178,7 @@ img {
   border-style: none; }
 
 svg:not(:root) {
-  overflow: hidden; }
+  overflow: auto; }
 
 table {
   border-collapse: collapse; }
@@ -7519,16 +7519,16 @@ h1, h2, h3, h4, h5,
   .owl-carousel.home-slider {
     position: relative;
     height: 750px;
-    z-index: 1; }
+    z-index: 0; }
     .owl-carousel.home-slider .slider-item {
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center center;
       height: 750px;
       position: relative;
-      z-index: 1; }
+      z-index: 0; }
       .owl-carousel.home-slider .slider-item .overlay {
-        position: relative;
+        position: absolute;
         top: 0;
         bottom: 0;
         left: 0;
